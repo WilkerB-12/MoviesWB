@@ -1,12 +1,12 @@
-function Footer(){
-    return(
+function Footer() {
+    return (
         <footer>
-            <nav>
-                <ul>
-                    <li>
-                        <a href='http://instagram.com' rel="noopener nooreferrer">IG</a>
-                    </li>
-                </ul>
+            <nav className="navbar sticky-bottom bg-light">
+                <div className="container-fluid">
+                    <span className="navbar-text">
+                        Navbar text with an inline element
+                    </span>
+                </div>
             </nav>
         </footer>
     )

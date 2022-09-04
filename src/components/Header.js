@@ -3,6 +3,8 @@ import logo from '../pngwingcom.png';
 
 function Header() {
 
+    let token = sessionStorage.getItem('token')
+
     return (
         <header>
             <nav className="navbar navbar-dark navbar-expand-sm bg-dark text-light">
@@ -13,16 +15,16 @@ function Header() {
                                 <img src={logo} alt="..." height="60" />
                             </li>
                             <li className="nav-item d-flex align-items-center">
-                                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                                {token && <Link className="nav-link active" aria-current="page" to="/">Home</Link>}
                             </li>
                             <li className="nav-item d-flex align-items-center">
-                                <Link className="nav-link" to="/Favorites">Favoritos</Link>
+                                {token && <Link className="nav-link" to="/Favorites">Favoritos</Link>}
                             </li>
                         </ul>
                     </div>
                     <form className="d-flex" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Escriba palabra clave..." aria-label="Search"/>
-                            <button className="btn btn-outline-light" type="submit">Buscar</button>
+                        <input className="form-control me-2" type="search" placeholder="Escriba palabra clave..." aria-label="Search" />
+                        <button className="btn btn-outline-light" type="submit">Buscar</button>
                     </form>
                 </div>
             </nav>
