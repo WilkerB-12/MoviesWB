@@ -40,14 +40,18 @@ function Login() {
         }
 
         console.log('Ok, estamos listos para enviar la información');
-        axios
+        /*axios
             .post('http://challenge-react.alkemy.org', { email, password })
             .then(res => {
                 swAlert(<h2>Perfeto, ingresaste correctamente</h2>)
                 const tokenRecibido = res.data.token;
                 sessionStorage.setItem('token', tokenRecibido);
                 history('/listado');
-            })
+            })*/
+            swAlert(<h2>Perfeto, ingresaste correctamente</h2>)
+            const tokenRecibido = 'token válido';
+            sessionStorage.setItem('token', tokenRecibido);
+            history('/listado'); 
     }
     let token = sessionStorage.getItem('token');
 
